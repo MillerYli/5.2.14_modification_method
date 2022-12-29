@@ -4,7 +4,7 @@ namespace mynamespase
 {
     class Program
     {
-        static int[] GetArrayFromConsole(int num = 5)
+        static int[] GetArrayFromConsole(ref int num)
         {
             var result = new int[num];
 
@@ -41,7 +41,8 @@ namespace mynamespase
         }
         public static void Main(string[] args)
         {
-            var array = GetArrayFromConsole();
+            int correctName = 4;
+            var array = GetArrayFromConsole(ref correctName);
 
             var sortedarray = SortArray(array);
 
